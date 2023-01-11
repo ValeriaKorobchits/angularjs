@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body ng-app>
+    <!--{{}} - вирази -->
+    <div>
+        <p>Total sum: {{10+20}}</p>
+    </div>
+    <div ng-init="color='orange'">
+        <input style="background-color: {{color}}" ng-model="color" value="{{color}}">
+    </div>
+    <div ng-init="q=12; price=20">
+        <p>Total price: {{q*price}}</p>
+    </div>
+
+    <!-- ng-bind -->
+    <div ng-init="q2=10; price2=50">
+        <p>Total price: <span ng-bind="q2*price2"></span></p>
+        <!-- Замість span можна написати будь-який тег. Наприклад: i, b-->
+    </div>
+
+    <div ng-init="name='Lera'; lastName='Korobchits'">
+        <p>Hello, {{name + " " + lastName}}</p>
+    </div>
+
+    <div ng-init="name='Lera'; lastName='Korobchits'">
+        <p>Hello, <i ng-bind="name + ' ' + lastName"></i></p>
+    </div>
+
+
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+</body>
+</html>
